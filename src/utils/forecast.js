@@ -33,7 +33,9 @@ const forecast = (latitude, longitude, callback) => {
           res.body.current.temperature +
           " degress out. There is a " +
           res.body.current.precip +
-          "% chance of rain."
+          "% chance of rain. The humidity is " +
+          res.body.current.humidity +
+          "%"
       );
     }
   });
