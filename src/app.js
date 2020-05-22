@@ -4,6 +4,7 @@ const express = require("express");
 const hbs = require("hbs");
 const path = require("path");
 const app = express();
+const port = process.env.PORT || 3000;
 console.log(__dirname);
 //define paths for express config
 const direct_name = path.join(__dirname, "../public");
@@ -83,6 +84,6 @@ app.get("*", (req, res) => {
   res.send("my 404 page");
 });
 
-app.listen(3000, () => {
-  console.log("listening at port 3000,server is on");
+app.listen(port, () => {
+  console.log("listening at port " + port + ",server is on");
 });
